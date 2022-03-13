@@ -1,0 +1,786 @@
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"ssd1306.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.spi_sendbyte,"ax",%progbits
+  18              		.align	1
+  19              		.global	spi_sendbyte
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	spi_sendbyte:
+  27              	.LVL0:
+  28              	.LFB131:
+  29              		.file 1 "Core/ssd1306/ssd1306.c"
+   1:Core/ssd1306/ssd1306.c **** /*
+   2:Core/ssd1306/ssd1306.c **** By Samosn Wu
+   3:Core/ssd1306/ssd1306.c **** */
+   4:Core/ssd1306/ssd1306.c **** #include "ssd1306.h"
+   5:Core/ssd1306/ssd1306.c **** 
+   6:Core/ssd1306/ssd1306.c **** void ssd1306_init()
+   7:Core/ssd1306/ssd1306.c **** {
+   8:Core/ssd1306/ssd1306.c ****     HAL_GPIO_WritePin(OLED_DC, 1);
+   9:Core/ssd1306/ssd1306.c ****     HAL_GPIO_WritePin(OLED_CS, 1);
+  10:Core/ssd1306/ssd1306.c ****     HAL_GPIO_WritePin(OLED_RES, 1);
+  11:Core/ssd1306/ssd1306.c ****     HAL_Delay(1);
+  12:Core/ssd1306/ssd1306.c ****     HAL_GPIO_WritePin(OLED_RES, 0);
+  13:Core/ssd1306/ssd1306.c ****     HAL_Delay(1);
+  14:Core/ssd1306/ssd1306.c ****     HAL_GPIO_WritePin(OLED_RES, 1);
+  15:Core/ssd1306/ssd1306.c **** 
+  16:Core/ssd1306/ssd1306.c **** 	//set mux ration		
+  17:Core/ssd1306/ssd1306.c ****     oled_writecmd(0xA8);
+  18:Core/ssd1306/ssd1306.c ****     oled_writecmd(0x3F);
+  19:Core/ssd1306/ssd1306.c **** 
+  20:Core/ssd1306/ssd1306.c **** 	//set display offest
+  21:Core/ssd1306/ssd1306.c ****     oled_writecmd(0xD3);
+  22:Core/ssd1306/ssd1306.c ****     oled_writecmd(0x00);
+  23:Core/ssd1306/ssd1306.c **** 
+  24:Core/ssd1306/ssd1306.c **** 	//set display start line
+  25:Core/ssd1306/ssd1306.c ****     oled_writecmd(0x40);
+  26:Core/ssd1306/ssd1306.c **** 
+  27:Core/ssd1306/ssd1306.c **** 	//set segment re-map
+  28:Core/ssd1306/ssd1306.c ****     oled_writecmd(0xA1);
+  29:Core/ssd1306/ssd1306.c **** 
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s 			page 2
+
+
+  30:Core/ssd1306/ssd1306.c **** 	//set com output scan direction
+  31:Core/ssd1306/ssd1306.c ****     oled_writecmd(0xC8);
+  32:Core/ssd1306/ssd1306.c **** 
+  33:Core/ssd1306/ssd1306.c **** 	//set com pins hardware configuration
+  34:Core/ssd1306/ssd1306.c ****     oled_writecmd(0xDA);
+  35:Core/ssd1306/ssd1306.c ****     oled_writecmd(0x02);
+  36:Core/ssd1306/ssd1306.c **** 
+  37:Core/ssd1306/ssd1306.c **** 	//set contrast control
+  38:Core/ssd1306/ssd1306.c ****     oled_writecmd(0x81);
+  39:Core/ssd1306/ssd1306.c ****     oled_writecmd(0x7F);
+  40:Core/ssd1306/ssd1306.c **** 
+  41:Core/ssd1306/ssd1306.c **** 	//diable entire diasplay on
+  42:Core/ssd1306/ssd1306.c ****     oled_writecmd(0xA4);
+  43:Core/ssd1306/ssd1306.c **** 
+  44:Core/ssd1306/ssd1306.c **** 	//set normal display 
+  45:Core/ssd1306/ssd1306.c ****     oled_writecmd(0xA6);
+  46:Core/ssd1306/ssd1306.c **** 
+  47:Core/ssd1306/ssd1306.c **** 	//set osc frequency
+  48:Core/ssd1306/ssd1306.c ****     oled_writecmd(0xD5);
+  49:Core/ssd1306/ssd1306.c ****     oled_writecmd(0x80);
+  50:Core/ssd1306/ssd1306.c **** 
+  51:Core/ssd1306/ssd1306.c **** 	//enable charge pump regulator
+  52:Core/ssd1306/ssd1306.c ****     oled_writecmd(0x8D);
+  53:Core/ssd1306/ssd1306.c ****     oled_writecmd(0x14);
+  54:Core/ssd1306/ssd1306.c **** 
+  55:Core/ssd1306/ssd1306.c **** 	//display
+  56:Core/ssd1306/ssd1306.c ****     oled_writecmd(0xAF);
+  57:Core/ssd1306/ssd1306.c **** }
+  58:Core/ssd1306/ssd1306.c **** 
+  59:Core/ssd1306/ssd1306.c **** void spi_sendbyte(uint8_t data)
+  60:Core/ssd1306/ssd1306.c **** {
+  30              		.loc 1 60 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 8
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 60 1 is_stmt 0 view .LVU1
+  35 0000 00B5     		push	{lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 4
+  38              		.cfi_offset 14, -4
+  39 0002 83B0     		sub	sp, sp, #12
+  40              	.LCFI1:
+  41              		.cfi_def_cfa_offset 16
+  42 0004 8DF80700 		strb	r0, [sp, #7]
+  61:Core/ssd1306/ssd1306.c ****     HAL_SPI_Transmit(&spi_port, (uint8_t*)&data, 1, 10);
+  43              		.loc 1 61 5 is_stmt 1 view .LVU2
+  44 0008 0A23     		movs	r3, #10
+  45 000a 0122     		movs	r2, #1
+  46 000c 0DF10701 		add	r1, sp, #7
+  47 0010 0248     		ldr	r0, .L3
+  48              	.LVL1:
+  49              		.loc 1 61 5 is_stmt 0 view .LVU3
+  50 0012 FFF7FEFF 		bl	HAL_SPI_Transmit
+  51              	.LVL2:
+  62:Core/ssd1306/ssd1306.c **** }
+  52              		.loc 1 62 1 view .LVU4
+  53 0016 03B0     		add	sp, sp, #12
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s 			page 3
+
+
+  54              	.LCFI2:
+  55              		.cfi_def_cfa_offset 4
+  56              		@ sp needed
+  57 0018 5DF804FB 		ldr	pc, [sp], #4
+  58              	.L4:
+  59              		.align	2
+  60              	.L3:
+  61 001c 00000000 		.word	hspi1
+  62              		.cfi_endproc
+  63              	.LFE131:
+  65              		.section	.text.oled_writecmd,"ax",%progbits
+  66              		.align	1
+  67              		.global	oled_writecmd
+  68              		.syntax unified
+  69              		.thumb
+  70              		.thumb_func
+  71              		.fpu fpv4-sp-d16
+  73              	oled_writecmd:
+  74              	.LVL3:
+  75              	.LFB132:
+  63:Core/ssd1306/ssd1306.c **** 
+  64:Core/ssd1306/ssd1306.c **** void oled_writecmd(uint8_t data)
+  65:Core/ssd1306/ssd1306.c **** {
+  76              		.loc 1 65 1 is_stmt 1 view -0
+  77              		.cfi_startproc
+  78              		@ args = 0, pretend = 0, frame = 0
+  79              		@ frame_needed = 0, uses_anonymous_args = 0
+  80              		.loc 1 65 1 is_stmt 0 view .LVU6
+  81 0000 38B5     		push	{r3, r4, r5, lr}
+  82              	.LCFI3:
+  83              		.cfi_def_cfa_offset 16
+  84              		.cfi_offset 3, -16
+  85              		.cfi_offset 4, -12
+  86              		.cfi_offset 5, -8
+  87              		.cfi_offset 14, -4
+  88 0002 0546     		mov	r5, r0
+  66:Core/ssd1306/ssd1306.c ****     HAL_GPIO_WritePin(OLED_DC, 0);
+  89              		.loc 1 66 5 is_stmt 1 view .LVU7
+  90 0004 094C     		ldr	r4, .L7
+  91 0006 0022     		movs	r2, #0
+  92 0008 1021     		movs	r1, #16
+  93 000a 2046     		mov	r0, r4
+  94              	.LVL4:
+  95              		.loc 1 66 5 is_stmt 0 view .LVU8
+  96 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
+  97              	.LVL5:
+  67:Core/ssd1306/ssd1306.c ****     HAL_GPIO_WritePin(OLED_CS, 0);
+  98              		.loc 1 67 5 is_stmt 1 view .LVU9
+  99 0010 0022     		movs	r2, #0
+ 100 0012 2021     		movs	r1, #32
+ 101 0014 2046     		mov	r0, r4
+ 102 0016 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 103              	.LVL6:
+  68:Core/ssd1306/ssd1306.c ****     spi_sendbyte(data);
+ 104              		.loc 1 68 5 view .LVU10
+ 105 001a 2846     		mov	r0, r5
+ 106 001c FFF7FEFF 		bl	spi_sendbyte
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s 			page 4
+
+
+ 107              	.LVL7:
+  69:Core/ssd1306/ssd1306.c ****     HAL_GPIO_WritePin(OLED_CS, 1);
+ 108              		.loc 1 69 5 view .LVU11
+ 109 0020 0122     		movs	r2, #1
+ 110 0022 2021     		movs	r1, #32
+ 111 0024 2046     		mov	r0, r4
+ 112 0026 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 113              	.LVL8:
+  70:Core/ssd1306/ssd1306.c **** }
+ 114              		.loc 1 70 1 is_stmt 0 view .LVU12
+ 115 002a 38BD     		pop	{r3, r4, r5, pc}
+ 116              	.L8:
+ 117              		.align	2
+ 118              	.L7:
+ 119 002c 00080240 		.word	1073874944
+ 120              		.cfi_endproc
+ 121              	.LFE132:
+ 123              		.section	.text.ssd1306_init,"ax",%progbits
+ 124              		.align	1
+ 125              		.global	ssd1306_init
+ 126              		.syntax unified
+ 127              		.thumb
+ 128              		.thumb_func
+ 129              		.fpu fpv4-sp-d16
+ 131              	ssd1306_init:
+ 132              	.LFB130:
+   7:Core/ssd1306/ssd1306.c ****     HAL_GPIO_WritePin(OLED_DC, 1);
+ 133              		.loc 1 7 1 is_stmt 1 view -0
+ 134              		.cfi_startproc
+ 135              		@ args = 0, pretend = 0, frame = 0
+ 136              		@ frame_needed = 0, uses_anonymous_args = 0
+ 137 0000 10B5     		push	{r4, lr}
+ 138              	.LCFI4:
+ 139              		.cfi_def_cfa_offset 8
+ 140              		.cfi_offset 4, -8
+ 141              		.cfi_offset 14, -4
+   8:Core/ssd1306/ssd1306.c ****     HAL_GPIO_WritePin(OLED_CS, 1);
+ 142              		.loc 1 8 5 view .LVU14
+ 143 0002 2C4C     		ldr	r4, .L11
+ 144 0004 0122     		movs	r2, #1
+ 145 0006 1021     		movs	r1, #16
+ 146 0008 2046     		mov	r0, r4
+ 147 000a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 148              	.LVL9:
+   9:Core/ssd1306/ssd1306.c ****     HAL_GPIO_WritePin(OLED_RES, 1);
+ 149              		.loc 1 9 5 view .LVU15
+ 150 000e 0122     		movs	r2, #1
+ 151 0010 2021     		movs	r1, #32
+ 152 0012 2046     		mov	r0, r4
+ 153 0014 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 154              	.LVL10:
+  10:Core/ssd1306/ssd1306.c ****     HAL_Delay(1);
+ 155              		.loc 1 10 5 view .LVU16
+ 156 0018 A4F50064 		sub	r4, r4, #2048
+ 157 001c 0122     		movs	r2, #1
+ 158 001e 4021     		movs	r1, #64
+ 159 0020 2046     		mov	r0, r4
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s 			page 5
+
+
+ 160 0022 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 161              	.LVL11:
+  11:Core/ssd1306/ssd1306.c ****     HAL_GPIO_WritePin(OLED_RES, 0);
+ 162              		.loc 1 11 5 view .LVU17
+ 163 0026 0120     		movs	r0, #1
+ 164 0028 FFF7FEFF 		bl	HAL_Delay
+ 165              	.LVL12:
+  12:Core/ssd1306/ssd1306.c ****     HAL_Delay(1);
+ 166              		.loc 1 12 5 view .LVU18
+ 167 002c 0022     		movs	r2, #0
+ 168 002e 4021     		movs	r1, #64
+ 169 0030 2046     		mov	r0, r4
+ 170 0032 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 171              	.LVL13:
+  13:Core/ssd1306/ssd1306.c ****     HAL_GPIO_WritePin(OLED_RES, 1);
+ 172              		.loc 1 13 5 view .LVU19
+ 173 0036 0120     		movs	r0, #1
+ 174 0038 FFF7FEFF 		bl	HAL_Delay
+ 175              	.LVL14:
+  14:Core/ssd1306/ssd1306.c **** 
+ 176              		.loc 1 14 5 view .LVU20
+ 177 003c 0122     		movs	r2, #1
+ 178 003e 4021     		movs	r1, #64
+ 179 0040 2046     		mov	r0, r4
+ 180 0042 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 181              	.LVL15:
+  17:Core/ssd1306/ssd1306.c ****     oled_writecmd(0x3F);
+ 182              		.loc 1 17 5 view .LVU21
+ 183 0046 A820     		movs	r0, #168
+ 184 0048 FFF7FEFF 		bl	oled_writecmd
+ 185              	.LVL16:
+  18:Core/ssd1306/ssd1306.c **** 
+ 186              		.loc 1 18 5 view .LVU22
+ 187 004c 3F20     		movs	r0, #63
+ 188 004e FFF7FEFF 		bl	oled_writecmd
+ 189              	.LVL17:
+  21:Core/ssd1306/ssd1306.c ****     oled_writecmd(0x00);
+ 190              		.loc 1 21 5 view .LVU23
+ 191 0052 D320     		movs	r0, #211
+ 192 0054 FFF7FEFF 		bl	oled_writecmd
+ 193              	.LVL18:
+  22:Core/ssd1306/ssd1306.c **** 
+ 194              		.loc 1 22 5 view .LVU24
+ 195 0058 0020     		movs	r0, #0
+ 196 005a FFF7FEFF 		bl	oled_writecmd
+ 197              	.LVL19:
+  25:Core/ssd1306/ssd1306.c **** 
+ 198              		.loc 1 25 5 view .LVU25
+ 199 005e 4020     		movs	r0, #64
+ 200 0060 FFF7FEFF 		bl	oled_writecmd
+ 201              	.LVL20:
+  28:Core/ssd1306/ssd1306.c **** 
+ 202              		.loc 1 28 5 view .LVU26
+ 203 0064 A120     		movs	r0, #161
+ 204 0066 FFF7FEFF 		bl	oled_writecmd
+ 205              	.LVL21:
+  31:Core/ssd1306/ssd1306.c **** 
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s 			page 6
+
+
+ 206              		.loc 1 31 5 view .LVU27
+ 207 006a C820     		movs	r0, #200
+ 208 006c FFF7FEFF 		bl	oled_writecmd
+ 209              	.LVL22:
+  34:Core/ssd1306/ssd1306.c ****     oled_writecmd(0x02);
+ 210              		.loc 1 34 5 view .LVU28
+ 211 0070 DA20     		movs	r0, #218
+ 212 0072 FFF7FEFF 		bl	oled_writecmd
+ 213              	.LVL23:
+  35:Core/ssd1306/ssd1306.c **** 
+ 214              		.loc 1 35 5 view .LVU29
+ 215 0076 0220     		movs	r0, #2
+ 216 0078 FFF7FEFF 		bl	oled_writecmd
+ 217              	.LVL24:
+  38:Core/ssd1306/ssd1306.c ****     oled_writecmd(0x7F);
+ 218              		.loc 1 38 5 view .LVU30
+ 219 007c 8120     		movs	r0, #129
+ 220 007e FFF7FEFF 		bl	oled_writecmd
+ 221              	.LVL25:
+  39:Core/ssd1306/ssd1306.c **** 
+ 222              		.loc 1 39 5 view .LVU31
+ 223 0082 7F20     		movs	r0, #127
+ 224 0084 FFF7FEFF 		bl	oled_writecmd
+ 225              	.LVL26:
+  42:Core/ssd1306/ssd1306.c **** 
+ 226              		.loc 1 42 5 view .LVU32
+ 227 0088 A420     		movs	r0, #164
+ 228 008a FFF7FEFF 		bl	oled_writecmd
+ 229              	.LVL27:
+  45:Core/ssd1306/ssd1306.c **** 
+ 230              		.loc 1 45 5 view .LVU33
+ 231 008e A620     		movs	r0, #166
+ 232 0090 FFF7FEFF 		bl	oled_writecmd
+ 233              	.LVL28:
+  48:Core/ssd1306/ssd1306.c ****     oled_writecmd(0x80);
+ 234              		.loc 1 48 5 view .LVU34
+ 235 0094 D520     		movs	r0, #213
+ 236 0096 FFF7FEFF 		bl	oled_writecmd
+ 237              	.LVL29:
+  49:Core/ssd1306/ssd1306.c **** 
+ 238              		.loc 1 49 5 view .LVU35
+ 239 009a 8020     		movs	r0, #128
+ 240 009c FFF7FEFF 		bl	oled_writecmd
+ 241              	.LVL30:
+  52:Core/ssd1306/ssd1306.c ****     oled_writecmd(0x14);
+ 242              		.loc 1 52 5 view .LVU36
+ 243 00a0 8D20     		movs	r0, #141
+ 244 00a2 FFF7FEFF 		bl	oled_writecmd
+ 245              	.LVL31:
+  53:Core/ssd1306/ssd1306.c **** 
+ 246              		.loc 1 53 5 view .LVU37
+ 247 00a6 1420     		movs	r0, #20
+ 248 00a8 FFF7FEFF 		bl	oled_writecmd
+ 249              	.LVL32:
+  56:Core/ssd1306/ssd1306.c **** }
+ 250              		.loc 1 56 5 view .LVU38
+ 251 00ac AF20     		movs	r0, #175
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s 			page 7
+
+
+ 252 00ae FFF7FEFF 		bl	oled_writecmd
+ 253              	.LVL33:
+  57:Core/ssd1306/ssd1306.c **** 
+ 254              		.loc 1 57 1 is_stmt 0 view .LVU39
+ 255 00b2 10BD     		pop	{r4, pc}
+ 256              	.L12:
+ 257              		.align	2
+ 258              	.L11:
+ 259 00b4 00080240 		.word	1073874944
+ 260              		.cfi_endproc
+ 261              	.LFE130:
+ 263              		.section	.text.oled_writedata,"ax",%progbits
+ 264              		.align	1
+ 265              		.global	oled_writedata
+ 266              		.syntax unified
+ 267              		.thumb
+ 268              		.thumb_func
+ 269              		.fpu fpv4-sp-d16
+ 271              	oled_writedata:
+ 272              	.LVL34:
+ 273              	.LFB133:
+  71:Core/ssd1306/ssd1306.c **** 
+  72:Core/ssd1306/ssd1306.c **** void oled_writedata(uint8_t data)
+  73:Core/ssd1306/ssd1306.c **** {
+ 274              		.loc 1 73 1 is_stmt 1 view -0
+ 275              		.cfi_startproc
+ 276              		@ args = 0, pretend = 0, frame = 0
+ 277              		@ frame_needed = 0, uses_anonymous_args = 0
+ 278              		.loc 1 73 1 is_stmt 0 view .LVU41
+ 279 0000 38B5     		push	{r3, r4, r5, lr}
+ 280              	.LCFI5:
+ 281              		.cfi_def_cfa_offset 16
+ 282              		.cfi_offset 3, -16
+ 283              		.cfi_offset 4, -12
+ 284              		.cfi_offset 5, -8
+ 285              		.cfi_offset 14, -4
+ 286 0002 0546     		mov	r5, r0
+  74:Core/ssd1306/ssd1306.c ****     HAL_GPIO_WritePin(OLED_DC, 1);
+ 287              		.loc 1 74 5 is_stmt 1 view .LVU42
+ 288 0004 094C     		ldr	r4, .L15
+ 289 0006 0122     		movs	r2, #1
+ 290 0008 1021     		movs	r1, #16
+ 291 000a 2046     		mov	r0, r4
+ 292              	.LVL35:
+ 293              		.loc 1 74 5 is_stmt 0 view .LVU43
+ 294 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 295              	.LVL36:
+  75:Core/ssd1306/ssd1306.c ****     HAL_GPIO_WritePin(OLED_CS, 0);
+ 296              		.loc 1 75 5 is_stmt 1 view .LVU44
+ 297 0010 0022     		movs	r2, #0
+ 298 0012 2021     		movs	r1, #32
+ 299 0014 2046     		mov	r0, r4
+ 300 0016 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 301              	.LVL37:
+  76:Core/ssd1306/ssd1306.c ****     spi_sendbyte(data);
+ 302              		.loc 1 76 5 view .LVU45
+ 303 001a 2846     		mov	r0, r5
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s 			page 8
+
+
+ 304 001c FFF7FEFF 		bl	spi_sendbyte
+ 305              	.LVL38:
+  77:Core/ssd1306/ssd1306.c ****     HAL_GPIO_WritePin(OLED_CS, 1);
+ 306              		.loc 1 77 5 view .LVU46
+ 307 0020 0122     		movs	r2, #1
+ 308 0022 2021     		movs	r1, #32
+ 309 0024 2046     		mov	r0, r4
+ 310 0026 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 311              	.LVL39:
+  78:Core/ssd1306/ssd1306.c **** }
+ 312              		.loc 1 78 1 is_stmt 0 view .LVU47
+ 313 002a 38BD     		pop	{r3, r4, r5, pc}
+ 314              	.L16:
+ 315              		.align	2
+ 316              	.L15:
+ 317 002c 00080240 		.word	1073874944
+ 318              		.cfi_endproc
+ 319              	.LFE133:
+ 321              		.section	.text.fill_screen,"ax",%progbits
+ 322              		.align	1
+ 323              		.global	fill_screen
+ 324              		.syntax unified
+ 325              		.thumb
+ 326              		.thumb_func
+ 327              		.fpu fpv4-sp-d16
+ 329              	fill_screen:
+ 330              	.LVL40:
+ 331              	.LFB136:
+  79:Core/ssd1306/ssd1306.c **** 
+  80:Core/ssd1306/ssd1306.c **** void clean_screen(){
+  81:Core/ssd1306/ssd1306.c ****     fill_screen(0x00);
+  82:Core/ssd1306/ssd1306.c **** }
+  83:Core/ssd1306/ssd1306.c **** 
+  84:Core/ssd1306/ssd1306.c **** void fill_white(){
+  85:Core/ssd1306/ssd1306.c ****     fill_screen(0xFF);
+  86:Core/ssd1306/ssd1306.c **** }
+  87:Core/ssd1306/ssd1306.c **** 
+  88:Core/ssd1306/ssd1306.c **** void fill_screen(uint8_t data){
+ 332              		.loc 1 88 31 is_stmt 1 view -0
+ 333              		.cfi_startproc
+ 334              		@ args = 0, pretend = 0, frame = 0
+ 335              		@ frame_needed = 0, uses_anonymous_args = 0
+ 336              		.loc 1 88 31 is_stmt 0 view .LVU49
+ 337 0000 70B5     		push	{r4, r5, r6, lr}
+ 338              	.LCFI6:
+ 339              		.cfi_def_cfa_offset 16
+ 340              		.cfi_offset 4, -16
+ 341              		.cfi_offset 5, -12
+ 342              		.cfi_offset 6, -8
+ 343              		.cfi_offset 14, -4
+ 344 0002 0546     		mov	r5, r0
+  89:Core/ssd1306/ssd1306.c **** 	oled_writecmd(0xAE);
+ 345              		.loc 1 89 2 is_stmt 1 view .LVU50
+ 346 0004 AE20     		movs	r0, #174
+ 347              	.LVL41:
+ 348              		.loc 1 89 2 is_stmt 0 view .LVU51
+ 349 0006 FFF7FEFF 		bl	oled_writecmd
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s 			page 9
+
+
+ 350              	.LVL42:
+  90:Core/ssd1306/ssd1306.c ****     //set memory addressing mode
+  91:Core/ssd1306/ssd1306.c **** 	oled_writecmd(0x20);
+ 351              		.loc 1 91 2 is_stmt 1 view .LVU52
+ 352 000a 2020     		movs	r0, #32
+ 353 000c FFF7FEFF 		bl	oled_writecmd
+ 354              	.LVL43:
+  92:Core/ssd1306/ssd1306.c **** 	oled_writecmd(0x00);
+ 355              		.loc 1 92 2 view .LVU53
+ 356 0010 0020     		movs	r0, #0
+ 357 0012 FFF7FEFF 		bl	oled_writecmd
+ 358              	.LVL44:
+  93:Core/ssd1306/ssd1306.c **** 
+  94:Core/ssd1306/ssd1306.c ****     for(int i = 0; i <= 7; i++){
+ 359              		.loc 1 94 5 view .LVU54
+ 360              	.LBB2:
+ 361              		.loc 1 94 9 view .LVU55
+ 362              		.loc 1 94 13 is_stmt 0 view .LVU56
+ 363 0016 0026     		movs	r6, #0
+ 364              		.loc 1 94 5 view .LVU57
+ 365 0018 06E0     		b	.L18
+ 366              	.LVL45:
+ 367              	.L19:
+ 368              	.LBB3:
+  95:Core/ssd1306/ssd1306.c ****         for(int j = 0; j <= 127; j++){
+  96:Core/ssd1306/ssd1306.c ****             oled_writedata(data);
+ 369              		.loc 1 96 13 is_stmt 1 discriminator 3 view .LVU58
+ 370 001a 2846     		mov	r0, r5
+ 371 001c FFF7FEFF 		bl	oled_writedata
+ 372              	.LVL46:
+  95:Core/ssd1306/ssd1306.c ****         for(int j = 0; j <= 127; j++){
+ 373              		.loc 1 95 34 discriminator 3 view .LVU59
+  95:Core/ssd1306/ssd1306.c ****         for(int j = 0; j <= 127; j++){
+ 374              		.loc 1 95 35 is_stmt 0 discriminator 3 view .LVU60
+ 375 0020 0134     		adds	r4, r4, #1
+ 376              	.LVL47:
+ 377              	.L20:
+  95:Core/ssd1306/ssd1306.c ****         for(int j = 0; j <= 127; j++){
+ 378              		.loc 1 95 24 is_stmt 1 discriminator 1 view .LVU61
+  95:Core/ssd1306/ssd1306.c ****         for(int j = 0; j <= 127; j++){
+ 379              		.loc 1 95 9 is_stmt 0 discriminator 1 view .LVU62
+ 380 0022 7F2C     		cmp	r4, #127
+ 381 0024 F9DD     		ble	.L19
+ 382              	.LBE3:
+  94:Core/ssd1306/ssd1306.c ****         for(int j = 0; j <= 127; j++){
+ 383              		.loc 1 94 28 is_stmt 1 discriminator 2 view .LVU63
+  94:Core/ssd1306/ssd1306.c ****         for(int j = 0; j <= 127; j++){
+ 384              		.loc 1 94 29 is_stmt 0 discriminator 2 view .LVU64
+ 385 0026 0136     		adds	r6, r6, #1
+ 386              	.LVL48:
+ 387              	.L18:
+  94:Core/ssd1306/ssd1306.c ****         for(int j = 0; j <= 127; j++){
+ 388              		.loc 1 94 20 is_stmt 1 discriminator 1 view .LVU65
+  94:Core/ssd1306/ssd1306.c ****         for(int j = 0; j <= 127; j++){
+ 389              		.loc 1 94 5 is_stmt 0 discriminator 1 view .LVU66
+ 390 0028 072E     		cmp	r6, #7
+ 391 002a 01DC     		bgt	.L23
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s 			page 10
+
+
+ 392              	.LBB4:
+  95:Core/ssd1306/ssd1306.c ****         for(int j = 0; j <= 127; j++){
+ 393              		.loc 1 95 17 view .LVU67
+ 394 002c 0024     		movs	r4, #0
+ 395 002e F8E7     		b	.L20
+ 396              	.L23:
+ 397              	.LBE4:
+ 398              	.LBE2:
+  97:Core/ssd1306/ssd1306.c ****         }
+  98:Core/ssd1306/ssd1306.c ****     }
+  99:Core/ssd1306/ssd1306.c **** 	oled_writecmd(0xAF);
+ 399              		.loc 1 99 2 is_stmt 1 view .LVU68
+ 400 0030 AF20     		movs	r0, #175
+ 401 0032 FFF7FEFF 		bl	oled_writecmd
+ 402              	.LVL49:
+ 100:Core/ssd1306/ssd1306.c **** }
+ 403              		.loc 1 100 1 is_stmt 0 view .LVU69
+ 404 0036 70BD     		pop	{r4, r5, r6, pc}
+ 405              		.loc 1 100 1 view .LVU70
+ 406              		.cfi_endproc
+ 407              	.LFE136:
+ 409              		.section	.text.clean_screen,"ax",%progbits
+ 410              		.align	1
+ 411              		.global	clean_screen
+ 412              		.syntax unified
+ 413              		.thumb
+ 414              		.thumb_func
+ 415              		.fpu fpv4-sp-d16
+ 417              	clean_screen:
+ 418              	.LFB134:
+  80:Core/ssd1306/ssd1306.c ****     fill_screen(0x00);
+ 419              		.loc 1 80 20 is_stmt 1 view -0
+ 420              		.cfi_startproc
+ 421              		@ args = 0, pretend = 0, frame = 0
+ 422              		@ frame_needed = 0, uses_anonymous_args = 0
+ 423 0000 08B5     		push	{r3, lr}
+ 424              	.LCFI7:
+ 425              		.cfi_def_cfa_offset 8
+ 426              		.cfi_offset 3, -8
+ 427              		.cfi_offset 14, -4
+  81:Core/ssd1306/ssd1306.c **** }
+ 428              		.loc 1 81 5 view .LVU72
+ 429 0002 0020     		movs	r0, #0
+ 430 0004 FFF7FEFF 		bl	fill_screen
+ 431              	.LVL50:
+  82:Core/ssd1306/ssd1306.c **** 
+ 432              		.loc 1 82 1 is_stmt 0 view .LVU73
+ 433 0008 08BD     		pop	{r3, pc}
+ 434              		.cfi_endproc
+ 435              	.LFE134:
+ 437              		.section	.text.fill_white,"ax",%progbits
+ 438              		.align	1
+ 439              		.global	fill_white
+ 440              		.syntax unified
+ 441              		.thumb
+ 442              		.thumb_func
+ 443              		.fpu fpv4-sp-d16
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s 			page 11
+
+
+ 445              	fill_white:
+ 446              	.LFB135:
+  84:Core/ssd1306/ssd1306.c ****     fill_screen(0xFF);
+ 447              		.loc 1 84 18 is_stmt 1 view -0
+ 448              		.cfi_startproc
+ 449              		@ args = 0, pretend = 0, frame = 0
+ 450              		@ frame_needed = 0, uses_anonymous_args = 0
+ 451 0000 08B5     		push	{r3, lr}
+ 452              	.LCFI8:
+ 453              		.cfi_def_cfa_offset 8
+ 454              		.cfi_offset 3, -8
+ 455              		.cfi_offset 14, -4
+  85:Core/ssd1306/ssd1306.c **** }
+ 456              		.loc 1 85 5 view .LVU75
+ 457 0002 FF20     		movs	r0, #255
+ 458 0004 FFF7FEFF 		bl	fill_screen
+ 459              	.LVL51:
+  86:Core/ssd1306/ssd1306.c **** 
+ 460              		.loc 1 86 1 is_stmt 0 view .LVU76
+ 461 0008 08BD     		pop	{r3, pc}
+ 462              		.cfi_endproc
+ 463              	.LFE135:
+ 465              		.section	.text.oled_print,"ax",%progbits
+ 466              		.align	1
+ 467              		.global	oled_print
+ 468              		.syntax unified
+ 469              		.thumb
+ 470              		.thumb_func
+ 471              		.fpu fpv4-sp-d16
+ 473              	oled_print:
+ 474              	.LFB137:
+ 101:Core/ssd1306/ssd1306.c **** 
+ 102:Core/ssd1306/ssd1306.c **** void oled_print(){
+ 475              		.loc 1 102 18 is_stmt 1 view -0
+ 476              		.cfi_startproc
+ 477              		@ args = 0, pretend = 0, frame = 8
+ 478              		@ frame_needed = 0, uses_anonymous_args = 0
+ 479 0000 00B5     		push	{lr}
+ 480              	.LCFI9:
+ 481              		.cfi_def_cfa_offset 4
+ 482              		.cfi_offset 14, -4
+ 483 0002 83B0     		sub	sp, sp, #12
+ 484              	.LCFI10:
+ 485              		.cfi_def_cfa_offset 16
+ 103:Core/ssd1306/ssd1306.c ****     uint8_t data[] = {0x20, 0x20, 0x20, 0x20, 0x20, 0x00, 0x20, 0x00};
+ 486              		.loc 1 103 5 view .LVU78
+ 487              		.loc 1 103 13 is_stmt 0 view .LVU79
+ 488 0004 164B     		ldr	r3, .L30
+ 489 0006 93E80300 		ldm	r3, {r0, r1}
+ 490 000a 02AB     		add	r3, sp, #8
+ 491 000c 03E90300 		stmdb	r3, {r0, r1}
+ 104:Core/ssd1306/ssd1306.c **** 
+ 105:Core/ssd1306/ssd1306.c ****     oled_writecmd(0xAE);
+ 492              		.loc 1 105 5 is_stmt 1 view .LVU80
+ 493 0010 AE20     		movs	r0, #174
+ 494 0012 FFF7FEFF 		bl	oled_writecmd
+ 495              	.LVL52:
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s 			page 12
+
+
+ 106:Core/ssd1306/ssd1306.c **** 	oled_writecmd(0x20);
+ 496              		.loc 1 106 2 view .LVU81
+ 497 0016 2020     		movs	r0, #32
+ 498 0018 FFF7FEFF 		bl	oled_writecmd
+ 499              	.LVL53:
+ 107:Core/ssd1306/ssd1306.c **** 	oled_writecmd(0x00);
+ 500              		.loc 1 107 2 view .LVU82
+ 501 001c 0020     		movs	r0, #0
+ 502 001e FFF7FEFF 		bl	oled_writecmd
+ 503              	.LVL54:
+ 108:Core/ssd1306/ssd1306.c **** 
+ 109:Core/ssd1306/ssd1306.c ****     oled_writedata(data[0]);
+ 504              		.loc 1 109 5 view .LVU83
+ 505 0022 2020     		movs	r0, #32
+ 506 0024 FFF7FEFF 		bl	oled_writedata
+ 507              	.LVL55:
+ 110:Core/ssd1306/ssd1306.c ****     oled_writedata(data[1]);
+ 508              		.loc 1 110 5 view .LVU84
+ 509 0028 2020     		movs	r0, #32
+ 510 002a FFF7FEFF 		bl	oled_writedata
+ 511              	.LVL56:
+ 111:Core/ssd1306/ssd1306.c ****     oled_writedata(data[2]);
+ 512              		.loc 1 111 5 view .LVU85
+ 513 002e 2020     		movs	r0, #32
+ 514 0030 FFF7FEFF 		bl	oled_writedata
+ 515              	.LVL57:
+ 112:Core/ssd1306/ssd1306.c ****     oled_writedata(data[3]);
+ 516              		.loc 1 112 5 view .LVU86
+ 517 0034 2020     		movs	r0, #32
+ 518 0036 FFF7FEFF 		bl	oled_writedata
+ 519              	.LVL58:
+ 113:Core/ssd1306/ssd1306.c ****     oled_writedata(data[4]);
+ 520              		.loc 1 113 5 view .LVU87
+ 521 003a 2020     		movs	r0, #32
+ 522 003c FFF7FEFF 		bl	oled_writedata
+ 523              	.LVL59:
+ 114:Core/ssd1306/ssd1306.c ****     oled_writedata(data[5]);
+ 524              		.loc 1 114 5 view .LVU88
+ 525 0040 0020     		movs	r0, #0
+ 526 0042 FFF7FEFF 		bl	oled_writedata
+ 527              	.LVL60:
+ 115:Core/ssd1306/ssd1306.c ****     oled_writedata(data[6]);
+ 528              		.loc 1 115 5 view .LVU89
+ 529 0046 2020     		movs	r0, #32
+ 530 0048 FFF7FEFF 		bl	oled_writedata
+ 531              	.LVL61:
+ 116:Core/ssd1306/ssd1306.c ****     oled_writedata(data[7]);
+ 532              		.loc 1 116 5 view .LVU90
+ 533 004c 0020     		movs	r0, #0
+ 534 004e FFF7FEFF 		bl	oled_writedata
+ 535              	.LVL62:
+ 117:Core/ssd1306/ssd1306.c **** 
+ 118:Core/ssd1306/ssd1306.c ****     oled_writecmd(0xAF);
+ 536              		.loc 1 118 5 view .LVU91
+ 537 0052 AF20     		movs	r0, #175
+ 538 0054 FFF7FEFF 		bl	oled_writecmd
+ 539              	.LVL63:
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s 			page 13
+
+
+ 119:Core/ssd1306/ssd1306.c **** }...
+ 540              		.loc 1 119 1 is_stmt 0 view .LVU92
+ 541 0058 03B0     		add	sp, sp, #12
+ 542              	.LCFI11:
+ 543              		.cfi_def_cfa_offset 4
+ 544              		@ sp needed
+ 545 005a 5DF804FB 		ldr	pc, [sp], #4
+ 546              	.L31:
+ 547 005e 00BF     		.align	2
+ 548              	.L30:
+ 549 0060 00000000 		.word	.LANCHOR0
+ 550              		.cfi_endproc
+ 551              	.LFE137:
+ 553              		.section	.rodata
+ 554              		.align	2
+ 555              		.set	.LANCHOR0,. + 0
+ 556              	.LC0:
+ 557 0000 20202020 		.ascii	"     \000 \000"
+ 557      20002000 
+ 558              		.text
+ 559              	.Letext0:
+ 560              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.07\\arm-none-eabi\\include\\
+ 561              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.07\\arm-none-eabi\\include\\
+ 562              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
+ 563              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 564              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 565              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h"
+ 566              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+ 567              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ 568              		.file 10 "Core/Inc/spi.h"
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s 			page 14
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 ssd1306.c
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:18     .text.spi_sendbyte:00000000 $t
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:26     .text.spi_sendbyte:00000000 spi_sendbyte
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:61     .text.spi_sendbyte:0000001c $d
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:66     .text.oled_writecmd:00000000 $t
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:73     .text.oled_writecmd:00000000 oled_writecmd
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:119    .text.oled_writecmd:0000002c $d
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:124    .text.ssd1306_init:00000000 $t
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:131    .text.ssd1306_init:00000000 ssd1306_init
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:259    .text.ssd1306_init:000000b4 $d
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:264    .text.oled_writedata:00000000 $t
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:271    .text.oled_writedata:00000000 oled_writedata
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:317    .text.oled_writedata:0000002c $d
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:322    .text.fill_screen:00000000 $t
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:329    .text.fill_screen:00000000 fill_screen
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:410    .text.clean_screen:00000000 $t
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:417    .text.clean_screen:00000000 clean_screen
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:438    .text.fill_white:00000000 $t
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:445    .text.fill_white:00000000 fill_white
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:466    .text.oled_print:00000000 $t
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:473    .text.oled_print:00000000 oled_print
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:549    .text.oled_print:00000060 $d
+C:\Users\wucha\AppData\Local\Temp\cc7Jma13.s:554    .rodata:00000000 $d
+
+UNDEFINED SYMBOLS
+HAL_SPI_Transmit
+hspi1
+HAL_GPIO_WritePin
+HAL_Delay

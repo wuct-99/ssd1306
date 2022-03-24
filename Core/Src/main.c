@@ -108,7 +108,8 @@ int main(void)
     HAL_Delay(2000);
     clean_screen();
     HAL_Delay(2000);
-    oled_print();
+
+    oled_print(14, 29);
 
     uint16_t ticks = HAL_GetTick();
     /* USER CODE END 2 */

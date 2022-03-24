@@ -60,7 +60,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c \
 Core/Src/system_stm32f4xx.c \
-Core/ssd1306/ssd1306.c
+Core/ssd1306/ssd1306.c \
 Core/ssd1306/ssd1306_fonts.c
 
 # ASM sources

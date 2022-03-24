@@ -9,6 +9,7 @@ extern "C" {
 #include "stm32f4xx_hal.h"
 #include "spi.h"
 #include "main.h"
+#include "ssd1306_fonts.h"
 
 
 #define SSD1306_INCLUDE_FONT_6x8
@@ -26,6 +27,6 @@ void oled_writedata(uint8_t data);
 void clean_screen();
 void fill_white();
 void fill_screen(uint8_t data);
-void oled_print();
+void oled_print(uint8_t x, uint8_t y);
 
 #endif 

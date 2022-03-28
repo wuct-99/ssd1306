@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
   37 0063 00494936 		.ascii	"\000II6\000\006\010\0106\000\006II0\0006II0\000\000"
   37      00060808 
   37      36000649 
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 2
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 2
 
 
   37      49300036 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
   48      36483000 
   48      30484800 
   49 0158 30484876 		.ascii	"0HHv\0008TT\010\000\010l\012\000\000\010TT8\0006\010"
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 3
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 3
 
 
   49      00385454 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
   69      00000000 
   69      0000002E 
   69      000006
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 4
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 4
 
 
   70 000f 00060000 		.ascii	"\000\006\000\000\024\177\024\177\024\006I\177I0$\020"
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
   81      00003601 
   81      06013636 
   82 00ec 10360036 		.ascii	"\0206\0006AA6\0006\011\011\006\0006A!V\0006\011\031"
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 5
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 5
 
 
   82      41413600 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
   98      49320101 
   98      71090736 
   98      49494936 
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 6
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 6
 
 
   99 008b 00563600 		.ascii	"\000V6\000\000\010\024\"A\000\024\024\024\024\024\000"
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
  110      2040443D 
  110      007F1028 
  110      44000041 
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 7
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 7
 
 
  110      7F40007C 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
  127      49320101 
  127      71090736 
  127      49494936 
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 8
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 8
 
 
  128 008b 00563600 		.ascii	"\000V6\000\000\010\024\"A\000\024\024\024\024\024\000"
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
  144      00070000 
  144      147F147F 
  144      14
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 9
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 9
 
 
  145 001c 00242A7F 		.ascii	"\000$*\177*\022\000#\023\010db\0006IU\"P\000\000\005"
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
  156      08087F00 
  156      00
  157 00fc 417F4100 		.ascii	"A\177A\000\000 @A?\001\000\177\010\024\"A\000\177@@"
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 10
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 10
 
 
  157      00204041 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
  168      78003844 
  168      44443800 
  168      FC242424 
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 11
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 11
 
 
  168      18001824 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
  185      00004261 
  186 0074 49460021 		.ascii	"IF\000!AEK1\000\030\024\022\177\020\000'EEE9\000<JI"
  186      41454B31 
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 12
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 12
 
 
  186      00181412 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
  197      14081463 
  197      00070870 
  198 015f 07006151 		.ascii	"\007\000aQIEC\000\000\177AA\000\000U*U*U\000\000AA\177"
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 13
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 13
 
 
  198      49454300 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
  220      FF211E00 
  220      00F008F0 
  220      00E018
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 14
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 14
 
 
  221 005a 00000021 		.ascii	"\000\000\000!\034\003\036!\036\000\000\360\010\210p"
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
  234      00000020 
  234      203F2020 
  234      00000070 
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 15
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 15
 
 
  234      0808
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
  247      00007048 
  247      08
  248 01f8 0808F000 		.ascii	"\010\010\360\000\000\000\00006\001\000\000\3000\310"
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 16
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 16
 
 
  248      00000030 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
  260      08F80800 
  260      00000000 
  260      203F2020 
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 17
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 17
 
 
  260      20203000 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
  272      200838C8 
  272      00C83808 
  273 039b 00000020 		.ascii	"\000\000\000 ? \000\000\000\020\010\010\010\3108\010"
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 18
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 18
 
 
  273      3F200000 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
  286      22130000 
  286      8080F088 
  286      888818
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 19
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 19
 
 
  287 046c 0020203F 		.ascii	"\000  ?  \000\000\000\000\200\200\200\200\200\000\000"
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
  298      01
  299 0533 00000080 		.ascii	"\000\000\000\200\200\200\200\200\000\0003$$$$\031\000"
  299      80808080 
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 20
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 20
 
 
  299      00003324 
@@ -1198,32 +1198,32 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 1
  314              		.file 1 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.07\\arm-none-eabi\\include\\
  315              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.07\\arm-none-eabi\\include\\
  316              		.file 3 "Core/ssd1306/ssd1306_fonts.h"
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 21
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 21
 
 
  317              		.file 4 "Core/ssd1306/ssd1306_fonts.c"
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s 			page 22
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s 			page 22
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ssd1306_fonts.c
-C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s:120    .rodata.ssd1306xled_font5x7_AB:00000000 ssd1306xled_font5x7_AB
-C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s:91     .rodata.ssd1306xled_font5x7:00000000 ssd1306xled_font5x7
-C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s:68     .rodata.digital_font5x7_AB:00000000 digital_font5x7_AB
-C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s:30     .rodata.digital_font5x7:00000000 digital_font5x7
-C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s:60     .rodata.digital_font5x7_123:00000000 digital_font5x7_123
-C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s:178    .rodata.ssd1306xled_font6x8_AB:00000000 ssd1306xled_font6x8_AB
-C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s:205    .rodata.ssd1306xled_font6x8_German:00000000 ssd1306xled_font6x8_German
-C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s:214    .rodata.ssd1306xled_font8x16:00000000 ssd1306xled_font8x16
-C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s:142    .rodata.ssd1306xled_font6x8:00000000 ssd1306xled_font6x8
-C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s:27     .rodata.digital_font5x7:00000000 $d
-C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s:57     .rodata.digital_font5x7_123:00000000 $d
-C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s:65     .rodata.digital_font5x7_AB:00000000 $d
-C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s:88     .rodata.ssd1306xled_font5x7:00000000 $d
-C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s:117    .rodata.ssd1306xled_font5x7_AB:00000000 $d
-C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s:139    .rodata.ssd1306xled_font6x8:00000000 $d
-C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s:175    .rodata.ssd1306xled_font6x8_AB:00000000 $d
-C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s:202    .rodata.ssd1306xled_font6x8_German:00000000 $d
-C:\Users\wucha\AppData\Local\Temp\cchBZPIg.s:211    .rodata.ssd1306xled_font8x16:00000000 $d
+C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s:120    .rodata.ssd1306xled_font5x7_AB:00000000 ssd1306xled_font5x7_AB
+C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s:91     .rodata.ssd1306xled_font5x7:00000000 ssd1306xled_font5x7
+C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s:68     .rodata.digital_font5x7_AB:00000000 digital_font5x7_AB
+C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s:30     .rodata.digital_font5x7:00000000 digital_font5x7
+C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s:60     .rodata.digital_font5x7_123:00000000 digital_font5x7_123
+C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s:178    .rodata.ssd1306xled_font6x8_AB:00000000 ssd1306xled_font6x8_AB
+C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s:205    .rodata.ssd1306xled_font6x8_German:00000000 ssd1306xled_font6x8_German
+C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s:214    .rodata.ssd1306xled_font8x16:00000000 ssd1306xled_font8x16
+C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s:142    .rodata.ssd1306xled_font6x8:00000000 ssd1306xled_font6x8
+C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s:27     .rodata.digital_font5x7:00000000 $d
+C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s:57     .rodata.digital_font5x7_123:00000000 $d
+C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s:65     .rodata.digital_font5x7_AB:00000000 $d
+C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s:88     .rodata.ssd1306xled_font5x7:00000000 $d
+C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s:117    .rodata.ssd1306xled_font5x7_AB:00000000 $d
+C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s:139    .rodata.ssd1306xled_font6x8:00000000 $d
+C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s:175    .rodata.ssd1306xled_font6x8_AB:00000000 $d
+C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s:202    .rodata.ssd1306xled_font6x8_German:00000000 $d
+C:\Users\wucha\AppData\Local\Temp\ccMTzu4I.s:211    .rodata.ssd1306xled_font8x16:00000000 $d
 
 NO UNDEFINED SYMBOLS

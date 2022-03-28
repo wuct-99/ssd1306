@@ -28,5 +28,6 @@ void clean_screen();
 void fill_white();
 void fill_screen(uint8_t data);
 void oled_print(uint8_t x, uint8_t y);
+void test();
 
 #endif 

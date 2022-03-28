@@ -23,8 +23,8 @@ build/main.o: Core/Src/main.c Core/Inc/main.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
- Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h Core/Inc/gpio.h \
- Core/Inc/main.h Core/Inc/spi.h Core/Inc/usart.h Core/ssd1306/ssd1306.h \
+ Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h Core/Inc/spi.h \
+ Core/Inc/main.h Core/Inc/usart.h Core/Inc/gpio.h Core/ssd1306/ssd1306.h \
  Core/ssd1306/ssd1306_fonts.h
 Core/Inc/main.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
@@ -54,9 +54,9 @@ Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
-Core/Inc/gpio.h:
-Core/Inc/main.h:
 Core/Inc/spi.h:
+Core/Inc/main.h:
 Core/Inc/usart.h:
+Core/Inc/gpio.h:
 Core/ssd1306/ssd1306.h:
 Core/ssd1306/ssd1306_fonts.h:

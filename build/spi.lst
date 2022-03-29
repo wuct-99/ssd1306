@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s 			page 1
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s 			page 1
   28:Core/Src/spi.c **** 
   29:Core/Src/spi.c **** /* SPI1 init function */
   30:Core/Src/spi.c **** void MX_SPI1_Init(void)
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s 			page 2
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s 			page 2
 
 
   31:Core/Src/spi.c **** {
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s 			page 1
   47:Core/Src/spi.c ****   hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_32;
   67              		.loc 1 47 3 is_stmt 1 view .LVU15
   68              		.loc 1 47 32 is_stmt 0 view .LVU16
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s 			page 3
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s 			page 3
 
 
   69 0026 2022     		movs	r2, #32
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s 			page 1
  110              		.syntax unified
  111              		.thumb
  112              		.thumb_func
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s 			page 4
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s 			page 4
 
 
  113              		.fpu fpv4-sp-d16
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s 			page 1
   82:Core/Src/spi.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   83:Core/Src/spi.c ****     GPIO_InitStruct.Alternate = GPIO_AF5_SPI1;
   84:Core/Src/spi.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s 			page 5
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s 			page 5
 
 
   85:Core/Src/spi.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s 			page 1
  185 0042 1B6B     		ldr	r3, [r3, #48]
  186 0044 03F00103 		and	r3, r3, #1
  187 0048 0293     		str	r3, [sp, #8]
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s 			page 6
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s 			page 6
 
 
   74:Core/Src/spi.c ****     /**SPI1 GPIO Configuration
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s 			page 1
  230              		.thumb
  231              		.thumb_func
  232              		.fpu fpv4-sp-d16
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s 			page 7
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s 			page 7
 
 
  234              	HAL_SPI_MspDeInit:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s 			page 1
  264 0014 5364     		str	r3, [r2, #68]
  107:Core/Src/spi.c **** 
  265              		.loc 1 107 5 view .LVU70
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s 			page 8
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s 			page 8
 
 
  266 0016 A021     		movs	r1, #160
@@ -459,22 +459,22 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s 			page 1
  299              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h"
  300              		.file 9 "Core/Inc/main.h"
  301              		.file 10 "Core/Inc/spi.h"
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s 			page 9
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 spi.c
-C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s:18     .text.MX_SPI1_Init:00000000 $t
-C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s:26     .text.MX_SPI1_Init:00000000 MX_SPI1_Init
-C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s:102    .text.MX_SPI1_Init:00000044 $d
-C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s:108    .text.HAL_SPI_MspInit:00000000 $t
-C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s:115    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
-C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s:221    .text.HAL_SPI_MspInit:00000068 $d
-C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s:227    .text.HAL_SPI_MspDeInit:00000000 $t
-C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s:234    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
-C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s:277    .text.HAL_SPI_MspDeInit:00000020 $d
-C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s:289    .bss.hspi1:00000000 hspi1
-C:\Users\wucha\AppData\Local\Temp\ccMNkVRG.s:285    .bss.hspi1:00000000 $d
+C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s:18     .text.MX_SPI1_Init:00000000 $t
+C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s:26     .text.MX_SPI1_Init:00000000 MX_SPI1_Init
+C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s:102    .text.MX_SPI1_Init:00000044 $d
+C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s:108    .text.HAL_SPI_MspInit:00000000 $t
+C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s:115    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
+C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s:221    .text.HAL_SPI_MspInit:00000068 $d
+C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s:227    .text.HAL_SPI_MspDeInit:00000000 $t
+C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s:234    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
+C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s:277    .text.HAL_SPI_MspDeInit:00000020 $d
+C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s:289    .bss.hspi1:00000000 hspi1
+C:\Users\wucha\AppData\Local\Temp\cciWc3dk.s:285    .bss.hspi1:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_SPI_Init

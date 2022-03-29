@@ -121,10 +121,11 @@ void oled_print(uint8_t x, uint8_t y){
     oled_writecmd(y);
     oled_writecmd(127);
 
-    uint8_t t[] = {0x00, 0x21, 0x41, 0x45, 0x4B, 0x31};
+    // uint8_t t[] = {0x00, 0x21, 0x41, 0x45, 0x4B, 0x31};
     //write data
-    for(int i = 0; i < 6; i++){
-        oled_writedata(t[i] << shift);
+    for(uint8_t i = 0; i < font_width; i++){
+        // oled_writedata(t[i] << shift);
+        oled_writedata(font_array[10+i] << shift);
     }
 
     if(shift != 0){
@@ -136,27 +137,53 @@ void oled_print(uint8_t x, uint8_t y){
         oled_writecmd(y);
         oled_writecmd(127);
         
-        for(int i = 0; i < 6; i++){
-            oled_writedata(t[i] >> (8 - shift));
+        for(uint8_t i = 0; i < font_width; i++){
+            oled_writedata(font_array[10+i] >> (8 - shift));
         }
     }
 }
 
-void test(){
-	oled_writecmd(0xAE);
+void oled_print_ch(uint8_t x, uint8_t y, char ch){
+    uint16_t index = ((ch - 32) * font_width)+ 4;
 
+    uint8_t page = x / 8;
+    uint8_t curr_x = page * 8;
+    uint8_t shift = x - curr_x;
+	
 	oled_writecmd(0x20);
 	oled_writecmd(0x00);
 
     oled_writecmd(0x22);
-    oled_writecmd(0);
+    oled_writecmd(page);
     oled_writecmd(7);
 
     oled_writecmd(0x21);
-    oled_writecmd(0);
+    oled_writecmd(y);
     oled_writecmd(127);
 
-    oled_writedata(0xFF);
-    
-	oled_writecmd(0xAF);
+    //write data
+    for(uint8_t i = 0; i <= font_width; i++){
+        oled_writedata(font_array[index+i] << shift);
+    }
+
+    if(shift != 0){
+        oled_writecmd(0x22);
+        oled_writecmd(page + 1);
+        oled_writecmd(7);
+
+        oled_writecmd(0x21);
+        oled_writecmd(y);
+        oled_writecmd(127);
+        
+        for(uint8_t i = 0; i <= font_width; i++){
+            oled_writedata(font_array[index+i] >> (8 - shift));
+        }
+    }
+}
+
+void oled_print_str(uint8_t x, uint8_t y, char* text){
+    uint16_t num_word = strlen(text);
+    for(int i = 0; i <= num_word; i++){
+        oled_print_ch(x , y + (i * font_width), text[i]);
+    }
 }

@@ -108,11 +108,10 @@ int main(void)
     clean_screen();
     HAL_Delay(2000);
 
-    // oled_writecmd(0xAE);
-    oled_print(5, 50);
-    oled_print(30, 60);
-    oled_print(50, 100);
-    // oled_writecmd(0xAF);
+    // oled_print(5, 50);
+    // oled_print(30, 60);
+    oled_print_str(0, 0, "abc");
+    oled_print_str(29, 20, "Hello world!");
 
     uint16_t ticks = HAL_GetTick();
   /* USER CODE END 2 */

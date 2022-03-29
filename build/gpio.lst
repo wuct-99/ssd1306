@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccEtq6zG.s 			page 1
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccuWD5ik.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccEtq6zG.s 			page 1
   28:Core/Src/gpio.c **** /* Configure GPIO                                                             */
   29:Core/Src/gpio.c **** /*----------------------------------------------------------------------------*/
   30:Core/Src/gpio.c **** /* USER CODE BEGIN 1 */
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccEtq6zG.s 			page 2
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccuWD5ik.s 			page 2
 
 
   31:Core/Src/gpio.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccEtq6zG.s 			page 1
   66              		.loc 1 47 3 view .LVU7
   67 0026 019A     		ldr	r2, [sp, #4]
   68              	.LBE2:
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccEtq6zG.s 			page 3
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccuWD5ik.s 			page 3
 
 
   69              		.loc 1 47 3 view .LVU8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccEtq6zG.s 			page 1
   53:Core/Src/gpio.c ****   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
  118              		.loc 1 53 3 view .LVU27
  119 0064 DFF86C80 		ldr	r8, .L3+12
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccEtq6zG.s 			page 4
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccuWD5ik.s 			page 4
 
 
  120 0068 2246     		mov	r2, r4
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccEtq6zG.s 			page 1
  158              		.loc 1 69 3 view .LVU39
  159              		.loc 1 69 23 is_stmt 0 view .LVU40
  160 009e 3023     		movs	r3, #48
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccEtq6zG.s 			page 5
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccuWD5ik.s 			page 5
 
 
  161 00a0 0593     		str	r3, [sp, #20]
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccEtq6zG.s 			page 1
  202              	.L3:
  203 00c8 00380240 		.word	1073887232
  204 00cc 00080240 		.word	1073874944
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccEtq6zG.s 			page 6
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccuWD5ik.s 			page 6
 
 
  205 00d0 00040240 		.word	1073873920
@@ -311,14 +311,14 @@ ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccEtq6zG.s 			page 1
  213              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.07\\arm-none-eabi\\include\\
  214              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
  215              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
-ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccEtq6zG.s 			page 7
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccuWD5ik.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 gpio.c
-C:\Users\wucha\AppData\Local\Temp\ccEtq6zG.s:18     .text.MX_GPIO_Init:00000000 $t
-C:\Users\wucha\AppData\Local\Temp\ccEtq6zG.s:26     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
-C:\Users\wucha\AppData\Local\Temp\ccEtq6zG.s:203    .text.MX_GPIO_Init:000000c8 $d
+C:\Users\wucha\AppData\Local\Temp\ccuWD5ik.s:18     .text.MX_GPIO_Init:00000000 $t
+C:\Users\wucha\AppData\Local\Temp\ccuWD5ik.s:26     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\wucha\AppData\Local\Temp\ccuWD5ik.s:203    .text.MX_GPIO_Init:000000c8 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin

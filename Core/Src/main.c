@@ -19,6 +19,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "dma.h"
 #include "spi.h"
 #include "usart.h"
 #include "gpio.h"
@@ -92,6 +93,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_SPI1_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
@@ -113,6 +115,8 @@ int main(void)
     oled_print_str(0, 0, "abc");
     oled_print_str(29, 20, "Hello world!");
 
+    uint8_t text[] = "hello world\n";
+
     uint16_t ticks = HAL_GetTick();
   /* USER CODE END 2 */
 
@@ -123,6 +127,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+        HAL_UART_Transmit_DMA(&huart2, (uint8_t *)text, sizeof(text));
+
         if (HAL_GetTick() - ticks > 1000)
         {
             HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7);

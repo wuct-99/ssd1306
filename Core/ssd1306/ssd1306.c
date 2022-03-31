@@ -69,7 +69,8 @@ void ssd1306_init()
 
 void spi_sendbyte(uint8_t data)
 {
-    HAL_SPI_Transmit(&spi_port, (uint8_t*)&data, 1, 10);
+    // HAL_SPI_Transmit(&spi_port, (uint8_t*)&data, 1, 10);
+    HAL_SPI_Transmit_DMA(&spi_port, (uint8_t*)&data, 1);
 }
 
 void oled_writecmd(uint8_t data)

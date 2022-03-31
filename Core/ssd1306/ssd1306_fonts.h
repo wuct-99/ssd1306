@@ -45,9 +45,6 @@ extern const uint8_t ssd1306xled_font6x8 [];
 /** Standard ASCII 8x16 Fixed Type font */
 extern const uint8_t ssd1306xled_font8x16[];
 
-/** German chars for standard ASCII 6x8 Fixed Type font */
-extern const uint8_t ssd1306xled_font6x8_German [];
-
 /** Standard ASCII 6x8 AB Fixed Type font with only capital letters */
 extern const uint8_t ssd1306xled_font6x8_AB [];
 

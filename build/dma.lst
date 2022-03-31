@@ -1,0 +1,264 @@
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccz9jcb0.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"dma.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.MX_DMA_Init,"ax",%progbits
+  18              		.align	1
+  19              		.global	MX_DMA_Init
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	MX_DMA_Init:
+  27              	.LFB130:
+  28              		.file 1 "Core/Src/dma.c"
+   1:Core/Src/dma.c **** /**
+   2:Core/Src/dma.c ****   ******************************************************************************
+   3:Core/Src/dma.c ****   * @file    dma.c
+   4:Core/Src/dma.c ****   * @brief   This file provides code for the configuration
+   5:Core/Src/dma.c ****   *          of all the requested memory to memory DMA transfers.
+   6:Core/Src/dma.c ****   ******************************************************************************
+   7:Core/Src/dma.c ****   * @attention
+   8:Core/Src/dma.c ****   *
+   9:Core/Src/dma.c ****   * <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
+  10:Core/Src/dma.c ****   * All rights reserved.</center></h2>
+  11:Core/Src/dma.c ****   *
+  12:Core/Src/dma.c ****   * This software component is licensed by ST under BSD 3-Clause license,
+  13:Core/Src/dma.c ****   * the "License"; You may not use this file except in compliance with the
+  14:Core/Src/dma.c ****   * License. You may obtain a copy of the License at:
+  15:Core/Src/dma.c ****   *                        opensource.org/licenses/BSD-3-Clause
+  16:Core/Src/dma.c ****   *
+  17:Core/Src/dma.c ****   ******************************************************************************
+  18:Core/Src/dma.c ****   */
+  19:Core/Src/dma.c **** 
+  20:Core/Src/dma.c **** /* Includes ------------------------------------------------------------------*/
+  21:Core/Src/dma.c **** #include "dma.h"
+  22:Core/Src/dma.c **** 
+  23:Core/Src/dma.c **** /* USER CODE BEGIN 0 */
+  24:Core/Src/dma.c **** 
+  25:Core/Src/dma.c **** /* USER CODE END 0 */
+  26:Core/Src/dma.c **** 
+  27:Core/Src/dma.c **** /*----------------------------------------------------------------------------*/
+  28:Core/Src/dma.c **** /* Configure DMA                                                              */
+  29:Core/Src/dma.c **** /*----------------------------------------------------------------------------*/
+  30:Core/Src/dma.c **** 
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccz9jcb0.s 			page 2
+
+
+  31:Core/Src/dma.c **** /* USER CODE BEGIN 1 */
+  32:Core/Src/dma.c **** 
+  33:Core/Src/dma.c **** /* USER CODE END 1 */
+  34:Core/Src/dma.c **** DMA_HandleTypeDef hdma_memtomem_dma2_stream0;
+  35:Core/Src/dma.c **** 
+  36:Core/Src/dma.c **** /**
+  37:Core/Src/dma.c ****   * Enable DMA controller clock
+  38:Core/Src/dma.c ****   * Configure DMA for memory to memory transfers
+  39:Core/Src/dma.c ****   *   hdma_memtomem_dma2_stream0
+  40:Core/Src/dma.c ****   */
+  41:Core/Src/dma.c **** void MX_DMA_Init(void)
+  42:Core/Src/dma.c **** {
+  29              		.loc 1 42 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 8
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 00B5     		push	{lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 4
+  36              		.cfi_offset 14, -4
+  37 0002 83B0     		sub	sp, sp, #12
+  38              	.LCFI1:
+  39              		.cfi_def_cfa_offset 16
+  43:Core/Src/dma.c **** 
+  44:Core/Src/dma.c ****   /* DMA controller clock enable */
+  45:Core/Src/dma.c ****   __HAL_RCC_DMA2_CLK_ENABLE();
+  40              		.loc 1 45 3 view .LVU1
+  41              	.LBB2:
+  42              		.loc 1 45 3 view .LVU2
+  43 0004 0023     		movs	r3, #0
+  44 0006 0193     		str	r3, [sp, #4]
+  45              		.loc 1 45 3 view .LVU3
+  46 0008 184A     		ldr	r2, .L5
+  47 000a 116B     		ldr	r1, [r2, #48]
+  48 000c 41F48001 		orr	r1, r1, #4194304
+  49 0010 1163     		str	r1, [r2, #48]
+  50              		.loc 1 45 3 view .LVU4
+  51 0012 126B     		ldr	r2, [r2, #48]
+  52 0014 02F48002 		and	r2, r2, #4194304
+  53 0018 0192     		str	r2, [sp, #4]
+  54              		.loc 1 45 3 view .LVU5
+  55 001a 019A     		ldr	r2, [sp, #4]
+  56              	.LBE2:
+  57              		.loc 1 45 3 view .LVU6
+  46:Core/Src/dma.c **** 
+  47:Core/Src/dma.c ****   /* Configure DMA request hdma_memtomem_dma2_stream0 on DMA2_Stream0 */
+  48:Core/Src/dma.c ****   hdma_memtomem_dma2_stream0.Instance = DMA2_Stream0;
+  58              		.loc 1 48 3 view .LVU7
+  59              		.loc 1 48 39 is_stmt 0 view .LVU8
+  60 001c 1448     		ldr	r0, .L5+4
+  61 001e 154A     		ldr	r2, .L5+8
+  62 0020 0260     		str	r2, [r0]
+  49:Core/Src/dma.c ****   hdma_memtomem_dma2_stream0.Init.Channel = DMA_CHANNEL_0;
+  63              		.loc 1 49 3 is_stmt 1 view .LVU9
+  64              		.loc 1 49 43 is_stmt 0 view .LVU10
+  65 0022 4360     		str	r3, [r0, #4]
+  50:Core/Src/dma.c ****   hdma_memtomem_dma2_stream0.Init.Direction = DMA_MEMORY_TO_MEMORY;
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccz9jcb0.s 			page 3
+
+
+  66              		.loc 1 50 3 is_stmt 1 view .LVU11
+  67              		.loc 1 50 45 is_stmt 0 view .LVU12
+  68 0024 8022     		movs	r2, #128
+  69 0026 8260     		str	r2, [r0, #8]
+  51:Core/Src/dma.c ****   hdma_memtomem_dma2_stream0.Init.PeriphInc = DMA_PINC_ENABLE;
+  70              		.loc 1 51 3 is_stmt 1 view .LVU13
+  71              		.loc 1 51 45 is_stmt 0 view .LVU14
+  72 0028 4FF40072 		mov	r2, #512
+  73 002c C260     		str	r2, [r0, #12]
+  52:Core/Src/dma.c ****   hdma_memtomem_dma2_stream0.Init.MemInc = DMA_MINC_ENABLE;
+  74              		.loc 1 52 3 is_stmt 1 view .LVU15
+  75              		.loc 1 52 42 is_stmt 0 view .LVU16
+  76 002e 4FF48062 		mov	r2, #1024
+  77 0032 0261     		str	r2, [r0, #16]
+  53:Core/Src/dma.c ****   hdma_memtomem_dma2_stream0.Init.PeriphDataAlignment = DMA_PDATAALIGN_BYTE;
+  78              		.loc 1 53 3 is_stmt 1 view .LVU17
+  79              		.loc 1 53 55 is_stmt 0 view .LVU18
+  80 0034 4361     		str	r3, [r0, #20]
+  54:Core/Src/dma.c ****   hdma_memtomem_dma2_stream0.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
+  81              		.loc 1 54 3 is_stmt 1 view .LVU19
+  82              		.loc 1 54 52 is_stmt 0 view .LVU20
+  83 0036 8361     		str	r3, [r0, #24]
+  55:Core/Src/dma.c ****   hdma_memtomem_dma2_stream0.Init.Mode = DMA_NORMAL;
+  84              		.loc 1 55 3 is_stmt 1 view .LVU21
+  85              		.loc 1 55 40 is_stmt 0 view .LVU22
+  86 0038 C361     		str	r3, [r0, #28]
+  56:Core/Src/dma.c ****   hdma_memtomem_dma2_stream0.Init.Priority = DMA_PRIORITY_LOW;
+  87              		.loc 1 56 3 is_stmt 1 view .LVU23
+  88              		.loc 1 56 44 is_stmt 0 view .LVU24
+  89 003a 0362     		str	r3, [r0, #32]
+  57:Core/Src/dma.c ****   hdma_memtomem_dma2_stream0.Init.FIFOMode = DMA_FIFOMODE_ENABLE;
+  90              		.loc 1 57 3 is_stmt 1 view .LVU25
+  91              		.loc 1 57 44 is_stmt 0 view .LVU26
+  92 003c 0422     		movs	r2, #4
+  93 003e 4262     		str	r2, [r0, #36]
+  58:Core/Src/dma.c ****   hdma_memtomem_dma2_stream0.Init.FIFOThreshold = DMA_FIFO_THRESHOLD_FULL;
+  94              		.loc 1 58 3 is_stmt 1 view .LVU27
+  95              		.loc 1 58 49 is_stmt 0 view .LVU28
+  96 0040 0322     		movs	r2, #3
+  97 0042 8262     		str	r2, [r0, #40]
+  59:Core/Src/dma.c ****   hdma_memtomem_dma2_stream0.Init.MemBurst = DMA_MBURST_SINGLE;
+  98              		.loc 1 59 3 is_stmt 1 view .LVU29
+  99              		.loc 1 59 44 is_stmt 0 view .LVU30
+ 100 0044 C362     		str	r3, [r0, #44]
+  60:Core/Src/dma.c ****   hdma_memtomem_dma2_stream0.Init.PeriphBurst = DMA_PBURST_SINGLE;
+ 101              		.loc 1 60 3 is_stmt 1 view .LVU31
+ 102              		.loc 1 60 47 is_stmt 0 view .LVU32
+ 103 0046 0363     		str	r3, [r0, #48]
+  61:Core/Src/dma.c ****   if (HAL_DMA_Init(&hdma_memtomem_dma2_stream0) != HAL_OK)
+ 104              		.loc 1 61 3 is_stmt 1 view .LVU33
+ 105              		.loc 1 61 7 is_stmt 0 view .LVU34
+ 106 0048 FFF7FEFF 		bl	HAL_DMA_Init
+ 107              	.LVL0:
+ 108              		.loc 1 61 6 view .LVU35
+ 109 004c 50B9     		cbnz	r0, .L4
+ 110              	.L2:
+  62:Core/Src/dma.c ****   {
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccz9jcb0.s 			page 4
+
+
+  63:Core/Src/dma.c ****     Error_Handler();
+  64:Core/Src/dma.c ****   }
+  65:Core/Src/dma.c **** 
+  66:Core/Src/dma.c ****   /* DMA interrupt init */
+  67:Core/Src/dma.c ****   /* DMA2_Stream3_IRQn interrupt configuration */
+  68:Core/Src/dma.c ****   HAL_NVIC_SetPriority(DMA2_Stream3_IRQn, 0, 0);
+ 111              		.loc 1 68 3 is_stmt 1 view .LVU36
+ 112 004e 0022     		movs	r2, #0
+ 113 0050 1146     		mov	r1, r2
+ 114 0052 3B20     		movs	r0, #59
+ 115 0054 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 116              	.LVL1:
+  69:Core/Src/dma.c ****   HAL_NVIC_EnableIRQ(DMA2_Stream3_IRQn);
+ 117              		.loc 1 69 3 view .LVU37
+ 118 0058 3B20     		movs	r0, #59
+ 119 005a FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 120              	.LVL2:
+  70:Core/Src/dma.c **** 
+  71:Core/Src/dma.c **** }
+ 121              		.loc 1 71 1 is_stmt 0 view .LVU38
+ 122 005e 03B0     		add	sp, sp, #12
+ 123              	.LCFI2:
+ 124              		.cfi_remember_state
+ 125              		.cfi_def_cfa_offset 4
+ 126              		@ sp needed
+ 127 0060 5DF804FB 		ldr	pc, [sp], #4
+ 128              	.L4:
+ 129              	.LCFI3:
+ 130              		.cfi_restore_state
+  63:Core/Src/dma.c ****   }
+ 131              		.loc 1 63 5 is_stmt 1 view .LVU39
+ 132 0064 FFF7FEFF 		bl	Error_Handler
+ 133              	.LVL3:
+ 134 0068 F1E7     		b	.L2
+ 135              	.L6:
+ 136 006a 00BF     		.align	2
+ 137              	.L5:
+ 138 006c 00380240 		.word	1073887232
+ 139 0070 00000000 		.word	.LANCHOR0
+ 140 0074 10640240 		.word	1073898512
+ 141              		.cfi_endproc
+ 142              	.LFE130:
+ 144              		.global	hdma_memtomem_dma2_stream0
+ 145              		.section	.bss.hdma_memtomem_dma2_stream0,"aw",%nobits
+ 146              		.align	2
+ 147              		.set	.LANCHOR0,. + 0
+ 150              	hdma_memtomem_dma2_stream0:
+ 151 0000 00000000 		.space	96
+ 151      00000000 
+ 151      00000000 
+ 151      00000000 
+ 151      00000000 
+ 152              		.text
+ 153              	.Letext0:
+ 154              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.07\\arm-none-eabi\\include\\
+ 155              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.07\\arm-none-eabi\\include\\
+ 156              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccz9jcb0.s 			page 5
+
+
+ 157              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 158              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 159              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"
+ 160              		.file 8 "Core/Inc/main.h"
+ 161              		.file 9 "Core/Inc/dma.h"
+ARM GAS  C:\Users\wucha\AppData\Local\Temp\ccz9jcb0.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 dma.c
+C:\Users\wucha\AppData\Local\Temp\ccz9jcb0.s:18     .text.MX_DMA_Init:00000000 $t
+C:\Users\wucha\AppData\Local\Temp\ccz9jcb0.s:26     .text.MX_DMA_Init:00000000 MX_DMA_Init
+C:\Users\wucha\AppData\Local\Temp\ccz9jcb0.s:138    .text.MX_DMA_Init:0000006c $d
+C:\Users\wucha\AppData\Local\Temp\ccz9jcb0.s:150    .bss.hdma_memtomem_dma2_stream0:00000000 hdma_memtomem_dma2_stream0
+C:\Users\wucha\AppData\Local\Temp\ccz9jcb0.s:146    .bss.hdma_memtomem_dma2_stream0:00000000 $d
+
+UNDEFINED SYMBOLS
+HAL_DMA_Init
+HAL_NVIC_SetPriority
+HAL_NVIC_EnableIRQ
+Error_Handler

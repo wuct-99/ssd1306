@@ -65,6 +65,8 @@ void ssd1306_init()
 
 	//display on
     oled_writecmd(0xAF);
+
+    clean_screen();
 }
 
 void spi_sendbyte(uint8_t data)
